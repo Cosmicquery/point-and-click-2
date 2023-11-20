@@ -8,9 +8,15 @@ using UnityEngine.UI;
 
 public class buttonManeger : MonoBehaviour
 {
-    [SerializeField] public string gameScene = "Game Scene 1";
+    //ville göra en array med scener, men den ville inte samarbeta
+    [SerializeField] public string gameScene = ("Game Scene 1");
+    [SerializeField] public string MenuScene = ("Menu scene");
     public void StartGame()
     {
         SceneManager.LoadScene(gameScene);
+    }
+    public void StopGame()
+    {
+        SceneManager.LoadScene(MenuScene);
     }
 }
